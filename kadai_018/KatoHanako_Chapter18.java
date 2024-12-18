@@ -1,18 +1,20 @@
 package kadai_018;
 
 public class KatoHanako_Chapter18 extends Kato_Chapter18 {
-
+    
+    // コンストラクタでgivenNameをセット
     public KatoHanako_Chapter18() {
-        setGivenName("花子"); 
+        this.setGivenName(); // "this." を追加して、明確にメソッド呼び出しを指定
     }
-
+    
+    // givenNameフィールドに花子をセットするメソッド
+    public void setGivenName() {
+        this.givenName = "花子"; // "this." を追加して、フィールドへのアクセスを明確化
+    }
+    
+    // 個別の紹介を出力するメソッド
     @Override
-    void eachIntroduce() {
-        System.out.println("私は設計が得意です");
+    public void eachIntroduce() {
+        System.out.println("趣味は読書です");
     }
 }
-
-
-//名前は加藤花子です
-//住所は東京都中野区〇×です
-//趣味は読書です

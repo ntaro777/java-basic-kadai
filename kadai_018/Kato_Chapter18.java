@@ -1,26 +1,24 @@
 package kadai_018;
 
-abstract public class Kato_Chapter18 {
-    public String familyName = "加藤";
-    public String givenName;
-    public String address = "東京都中野区○×";
+// 抽象クラス（親クラス）
+public abstract class Kato_Chapter18 {
+    public String familyName = "加藤";  // 姓
+    public String givenName;             // 名
+    public String address = "東京都中野区○×"; // 住所
 
-    public Kato_Chapter18() {
-    }
-
+    // 共通の紹介を出力するメソッド
     public void commonIntroduce() {
         System.out.println("名前は" + familyName + givenName + "です");
         System.out.println("住所は" + address + "です");
     }
 
-    abstract void eachIntroduce();
+    // 個別の紹介を出力する抽象メソッド
+    public abstract void eachIntroduce();
 
+    // 紹介を実行するメソッド
     public void execIntroduce() {
         commonIntroduce();
         eachIntroduce();
-    }
-
-    public void setGivenName(String givenName) {
-        this.givenName = givenName;
+        System.out.println(); // 改行
     }
 }
