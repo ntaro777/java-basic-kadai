@@ -13,12 +13,12 @@ public abstract class Kato_Chapter18 {
     }
 
     // 個別の紹介を出力する抽象メソッド
-    public abstract void eachIntroduce();
+     abstract public void eachIntroduce();
 
     // 紹介を実行するメソッド
     public void execIntroduce() {
         commonIntroduce();
         eachIntroduce();
-        System.out.println(); // 改行
+        System.out.println(); 
     }
 }
